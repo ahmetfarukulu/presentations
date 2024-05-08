@@ -62,7 +62,7 @@ When one of the tenant resolvers determines the current tenant, it should stop t
 
 ## Let's See It in Action: The Demonstration
 
-If you have an ABP commercial license, you can download the sample from the following [link](https://abp.io/api/download/samples/conf-24-saas ).
+If you have an ABP commercial license, you can download the sample from the following [link](https://abp.io/api/download/samples/conf-24-saas).
 
 ---
 # Code Example
@@ -185,7 +185,7 @@ If your db context or cache item hasn't tenancy side we can ignore with [IgnoreM
 - We can use the [ITenantStore](https://github.com/abpframework/abp/blob/4103618f861fe692b0ab56572daa0a9385ec4759/framework/src/Volo.Abp.MultiTenancy.Abstractions/Volo/Abp/MultiTenancy/ITenantStore.cs#L7) from other modules to find a tenant by id or name. Additionally, we can list all tenants using the **GetListAsync** method.
 	- TenantExamplesController#64
 - When we enqueue a background job if job args take implementation from IMultiTenant interface we don't need to change current tenant in job handler.
-	- [BackgroundJobExecuter](https://github.com/abpframework/abp/blob/4103618f861fe692b0ab56572daa0a9385ec4759/framework/src/Volo.Abp.BackgroundJobs.Abstractions/Volo/Abp/BackgroundJobs/BackgroundJobExecuter.cs#L48)#48
+	- [BackgroundJobExecuter](https://github.com/abpframework/abp/blob/4103618f861fe692b0ab56572daa0a9385ec4759/framework/src/Volo.Abp.BackgroundJobs.Abstractions/Volo/Abp/BackgroundJobs/BackgroundJobExecuter.cs#L48)
 - Just like background job system if our event class take implementation from **IMultiTenant** interface we don't need to change current tenant in event handler.
 	- [EventBusBase](https://github.com/abpframework/abp/blob/4103618f861fe692b0ab56572daa0a9385ec4759/framework/src/Volo.Abp.EventBus/Volo/Abp/EventBus/EventBusBase.cs#L214)
 ## Conclusion
